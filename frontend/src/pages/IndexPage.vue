@@ -34,6 +34,25 @@
         </q-list>
       </q-card-section>
     </q-card>
+    <div class="text-h4 q-mb-md">
+      LAB 1.1 homework: Git Workflow + Docker Compose (ตัวอย่างการบ้าน)
+    </div>
+    <div class="text-h4 q-mb-md">
+      Docker Compose Commands (ตัวอย่างคำสั่ง)
+    </div>
+
+    <q-card>
+      <q-card-section>
+        <q-list bordered separator class="q-mt-sm">
+          <q-item v-for="(cmd, index) in dockerComposeCommands" :key="index">
+            <q-item-section>
+              <q-item-label>{{ cmd.title }}</q-item-label>
+              <q-item-label caption>{{ cmd.detail }}</q-item-label>
+            </q-item-section>
+          </q-item>
+        </q-list>
+      </q-card-section>
+    </q-card>
   </q-page>
 </template>
 
@@ -78,5 +97,29 @@ const dockerItems = [
     title: 'Network',
     detail: 'ให้บริการใน Docker ติดต่อกันได้ เช่น Nginx ส่งต่อคำขอไปยัง Express',
   },
+]
+
+const dockerComposeCommands = [
+  {
+    title: 'docker compose config',
+    detail: 'ตรวจสอบความถูกต้องของไฟล์ docker-compose.yml',
+  },
+  {
+    title: 'docker compose up -d',
+    detail: 'สร้างและรัน container ตามที่กำหนดใน docker-compose.yml',
+  },
+  {
+    title: 'docker compose ps',
+    detail: 'แสดงสถานะของ container ที่รันอยู่',
+  },
+  {
+    title: 'docker compose down',
+    detail: 'หยุดและลบ container, network, volume ที่สร้างโดย docker-compose',
+  },
+  {
+    title: 'curl -I http://localhost:8080/',
+    detail: 'ตรวจสอบว่า Quasar SPA ถูกเสิร์ฟโดย Nginx หรือไม่ (ควรได้ HTTP/1.1 200 OK)',
+  }
+
 ]
 </script>
