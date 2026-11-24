@@ -44,7 +44,7 @@
 const gitSteps = [
   {
     title: 'แก้โค้ด Quasar ใน src/',
-    detail: 'เพิ่มหน้า / component ใหม่ เช่น IndexPage.vue, Layout ต่าง ๆ',
+    detail: 'เพิ่มหน้า / component ใหม่ เช่น IndexPage.vue, Layout ต่างๆ',
   },
   {
     title: 'ตรวจสอบสถานะไฟล์',
@@ -84,3 +84,4 @@ const dockerItems = [
   },
 ]
 </script>
+
